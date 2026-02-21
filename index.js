@@ -104,6 +104,21 @@
 
 /**************************************************************/
 
+// const whUnit = {
+//     name: "Plague Marine",
+//     information: {
+//         WS: "3+",
+//         BS: "3+",
+//         move: 5,
+//         Sv: "3+"
+//     }
+// }
+// console.log(whUnit)
+// console.log(whUnit.information)
+// console.log(whUnit.information.move)
+
+/**************************************************************/
+
 const whUnit = {
     name: "Plague Marine",
     information: {
@@ -113,4 +128,7 @@ const whUnit = {
         Sv: "3+"
     }
 }
-console.log(whUnit.information.move)
+
+delete whUnit.information["move"]
+
+console.log(whUnit)
