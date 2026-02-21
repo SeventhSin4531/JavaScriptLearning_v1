@@ -49,16 +49,10 @@
 
 const myObj = {
     first: "1",
-    second: "2",
-    third: "3"
 }
 
 console.log(myObj)
-
-myObj.first = 1
-myObj.second = 2
-myObj.third = 3
-
-console.log(myObj.first)
-console.log(myObj.second)
-console.log(myObj.third)
+myObj.second = "2"
+console.log(myObj)
+myObj.third = "3"
+console.log(myObj)
