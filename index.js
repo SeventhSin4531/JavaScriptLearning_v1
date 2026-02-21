@@ -119,16 +119,39 @@
 
 /**************************************************************/
 
-const whUnit = {
-    name: "Plague Marine",
-    information: {
-        WS: "3+",
-        BS: "3+",
-        move: 5,
-        Sv: "3+"
-    }
+// const whUnit = {
+//     name: "Plague Marine",
+//     information: {
+//         WS: "3+",
+//         BS: "3+",
+//         move: 5,
+//         Sv: "3+"
+//     }
+// }
+
+// delete whUnit.information["move"]
+
+// console.log(whUnit)
+
+/**************************************************************/
+
+const name = "Oleg"
+const age = 25
+
+const user = {
+    name: name,
+    age: age,
+    id: 101,
+    isKlient: true
 }
 
-delete whUnit.information["move"]
 
-console.log(whUnit)
+console.log(user)
+
+let drugoeName = "notOleg " + "Helow"
+let drugoeAge = 24 + 13
+
+user.name = drugoeName
+user.age = drugoeAge
+
+console.log(user)
