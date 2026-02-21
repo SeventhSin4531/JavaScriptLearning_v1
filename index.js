@@ -59,15 +59,45 @@
 
 /**************************************************************/
 
-const unit = {
-    name: "Chaos Space Marine",
-    WS: "3+",
-    BS: "3+",
-    move: 6,
-    Sv: "3+"
+// const unit = {
+//     name: "Chaos Space Marine",
+//     WS: "3+",
+//     BS: "3+",
+//     move: 6,
+//     Sv: "3+"
+// }
+// console.log(unit)
+
+// delete unit.move
+
+// console.log(unit)
+
+/**************************************************************/
+
+// const myObj = {
+//     first: "1",
+// }
+
+// console.log(myObj)
+
+// myObj["second"] = "2"
+
+// console.log(myObj)
+
+/**************************************************************/
+
+const objName = {
+
 }
-console.log(unit)
 
-delete unit.move
+console.log(objName)
 
-console.log(unit)
+const firstPropName = "first"
+const secondPropName = "second"
+const thirdPropName = "third"
+
+objName[firstPropName] = 1
+objName[secondPropName] = 2
+objName[thirdPropName] = 3
+
+console.log(objName)
