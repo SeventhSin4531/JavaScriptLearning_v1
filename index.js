@@ -21,4 +21,4 @@
 function a(){
     console.log("Chort")
 }
-a()
+a12()
