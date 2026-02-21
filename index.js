@@ -86,18 +86,31 @@
 
 /**************************************************************/
 
-const objName = {
+// const objName = {
 
+// }
+
+// console.log(objName)
+
+// const firstPropName = "first"
+// const secondPropName = "second"
+// const thirdPropName = "third"
+
+// objName[firstPropName] = 1
+// objName[secondPropName] = 2
+// objName[thirdPropName] = 3
+
+// console.log(objName)
+
+/**************************************************************/
+
+const whUnit = {
+    name: "Plague Marine",
+    information: {
+        WS: "3+",
+        BS: "3+",
+        move: 5,
+        Sv: "3+"
+    }
 }
-
-console.log(objName)
-
-const firstPropName = "first"
-const secondPropName = "second"
-const thirdPropName = "third"
-
-objName[firstPropName] = 1
-objName[secondPropName] = 2
-objName[thirdPropName] = 3
-
-console.log(objName)
+console.log(whUnit.information.move)
