@@ -135,12 +135,35 @@
 
 /**************************************************************/
 
+// const name = "Oleg"
+// const age = 25
+
+// const user = {
+//     name: name,
+//     age: age,
+//     id: 101,
+//     isKlient: true
+// }
+
+
+// console.log(user)
+
+// let drugoeName = "notOleg " + "Helow"
+// let drugoeAge = 24 + 13
+
+// user.name = drugoeName
+// user.age = drugoeAge
+
+// console.log(user)
+
+/**************************************************************/
+
 const name = "Oleg"
 const age = 25
 
 const user = {
-    name: name,
-    age: age,
+    name,
+    age,
     id: 101,
     isKlient: true
 }
