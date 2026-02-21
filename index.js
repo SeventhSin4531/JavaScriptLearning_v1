@@ -47,12 +47,27 @@
 
 /**************************************************************/
 
-const myObj = {
-    first: "1",
-}
+// const myObj = {
+//     first: "1",
+// }
 
-console.log(myObj)
-myObj.second = "2"
-console.log(myObj)
-myObj.third = "3"
-console.log(myObj)
+// console.log(myObj)
+// myObj.second = "2"
+// console.log(myObj)
+// myObj.third = "3"
+// console.log(myObj)
+
+/**************************************************************/
+
+const unit = {
+    name: "Chaos Space Marine",
+    WS: "3+",
+    BS: "3+",
+    move: 6,
+    Sv: "3+"
+}
+console.log(unit)
+
+delete unit.move
+
+console.log(unit)
