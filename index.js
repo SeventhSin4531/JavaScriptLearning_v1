@@ -18,11 +18,19 @@
 // a3 = undefined
 // console.log(a3)
 
-function a(){
+// function a(){
+//     console.log("Chort")
+// }
+// a()
+
+// a = 10
+
+// a()
+
+const a = () =>{
     console.log("Chort")
 }
 a()
 
-a = 10
-
+a = 20
 a()
