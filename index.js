@@ -217,3 +217,32 @@
 // позволяет хранить и передавать структурированную информацию
 // JSON — это текстовый файл, составленный по строгим, но простым правилам.
 // Внутри него данные организованы не в виде сплошного текста, а структурированы с помощью пар «ключ-значение» и упорядоченных списков
+
+// пример записи на JSON: ************************
+
+// {
+//     "userID": 1,
+//     "ID": 1,
+//     "title": "Test title",
+//     "status": {
+//         "complited": false
+//     }
+// }
+
+// JSON передаёт данные в виде строки:
+
+// {"userID": 1,"ID": 1,"title": "Test title","status": {"complited": false}}
+
+// для того, чтобы превратить JSON в объект JS, используется метод JSON.parse()
+// для обратного превращения используется метод JSON.stringify()
+
+// let a1 = {"userID": 1,"ID": 1,"title": "Test title","status": {"complited": false}}
+// const b1 = JSON.stringify(a1)
+// const c1 = JSON.parse(b1)
+
+// console.log(b1)
+// console.log(c1)
+
+// let a1 = '{"userID": 1,"ID": 1,"title": "Test title","status": {"complited": false}}'
+// const b1 = JSON.parse(a1)
+// console.log(b1)
