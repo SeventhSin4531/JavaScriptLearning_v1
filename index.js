@@ -187,3 +187,14 @@
 
 // window.innerWidth
 // globalThis.innerHeight
+// globalThis.console.log(10)
+
+/* метод - свойство объекта, значение которого - функция ******** */
+
+const myBook = {
+    name: "Всадник без головы",
+    costOfBook: function () {
+        console.log(300)
+    }
+}
+myBook.costOfBook()
