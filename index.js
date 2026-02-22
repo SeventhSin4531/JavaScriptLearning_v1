@@ -158,23 +158,29 @@
 
 /**************************************************************/
 
-const name = "Oleg"
-const age = 25
+// const name = "Oleg"
+// const age = 25
 
-const user = {
-    name,
-    age,
-    id: 101,
-    isKlient: true
-}
+// const user = {
+/*Рекомендуется размещать сокращённые свойства в начале объекта, и сортировать их по длине названия*/
+//     age,
+//     name,
+//     id: 101,
+//     isKlient: true
+// }
 
 
-console.log(user)
+// console.log(user)
 
-let drugoeName = "notOleg " + "Helow"
-let drugoeAge = 24 + 13
+// let drugoeName = "notOleg " + "Helow"
+// let drugoeAge = 24 + 13
 
-user.name = drugoeName
-user.age = drugoeAge
+// user.name = drugoeName
+// user.age = drugoeAge
 
-console.log(user)
+// console.log(user)
+
+/**************************************************************/
+
+/* глобальные объекты window (в веб-браузерах), global (в node.js) имеют огромное количество свойств, в т.ч. высоту и ширину экрана
+(для веб-браузеров). так же существует унифицированное название для глобальных объектов, globalThis*/
