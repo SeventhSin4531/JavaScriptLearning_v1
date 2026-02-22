@@ -191,10 +191,19 @@
 
 /* метод - свойство объекта, значение которого - функция ******** */
 
+// const myBook = {
+//     name: "Всадник без головы",
+//     costOfBook: function () {
+//         console.log(300)
+//     }
+// }
+// myBook.costOfBook()
+
 const myBook = {
     name: "Всадник без головы",
-    costOfBook: function () {
+    costOfBook() {
         console.log(300)
     }
 }
+
 myBook.costOfBook()
