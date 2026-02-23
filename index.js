@@ -294,21 +294,61 @@
 
 /* ****************************************как избежать мутаций**************************************** */
 
+// const person = {
+//     name: "Test",
+//     age: 21
+// }
+
+// // с помощью специальной функции (точнее с помощью специального метода объекта Object) можно прям создать копию объекта
+
+// const person2 = Object.assign({}, person) // почитать про эту шнягу подробне
+
+// person2.age = 26
+// person2.name = "HUI"
+// console.log(person)
+// console.log(person2)
+
+// // но при использовании метода assign ВЛОЖЕННЫЕ объекты не копируются, а мутируются, т.е. если у объекта есть вложенные объекты, то ссылки на них СОХРАНЯЮТСЯ
+
+// const bimbus = {
+//     test: "Test",
+//     isChlen: {
+//         da: false,
+//         net: true
+//     }
+// }
+
+// const bimbus2 = Object.assign({}, bimbus)
+
+// bimbus.isChlen.da = true
+// bimbus2.test = "Not_Test"
+// bimbus2.isChlen.net = false
+
+// console.log(bimbus)
+// console.log(bimbus2)
+
+// // и вот такой вывод получим в таком случае:
+// // { test: 'Test', isChlen: { da: true, net: false } }
+// // { test: 'Not_Test', isChlen: { da: true, net: false } }
+
+/* ****************************************второй способ создания копий объекта**************************************** */
+
 const person = {
     name: "Test",
     age: 21
 }
 
-// с помощью специальной функции (точнее с помощью специального метода объекта Object) можно прям создать копию объекта
+// используем оператор разделения объекта на свойства (...)
 
-const person2 = Object.assign({}, person) // почитать про эту шнягу подробне
+const person2 = {...person}
 
-person2.age = 26
-person2.name = "HUI"
-// console.log(person)
-// console.log(person2)
+person2.name = "ЗА РУССА И ВСЕОТЦА!!!"
+person2.age = 40000
 
-// но при использовании метода assign ВЛОЖЕННЫЕ объекты не копируются, а мутируются, т.е. если у объекта есть вложенные объекты, то ссылки на них СОХРАНЯЮТСЯ
+console.log(person)
+console.log(person2)
+
+// но это по сути одна хуйня, используя такой метод вложенные объекты не скопируешь
 
 const bimbus = {
     test: "Test",
@@ -318,7 +358,7 @@ const bimbus = {
     }
 }
 
-const bimbus2 = Object.assign({}, bimbus)
+const bimbus2 = {...bimbus}
 
 bimbus.isChlen.da = true
 bimbus2.test = "Not_Test"
@@ -327,6 +367,6 @@ bimbus2.isChlen.net = false
 console.log(bimbus)
 console.log(bimbus2)
 
-// и вот такой вывод получим в таком случае:
+// вывод такой же, как и в первом случае:
 // { test: 'Test', isChlen: { da: true, net: false } }
 // { test: 'Not_Test', isChlen: { da: true, net: false } }
