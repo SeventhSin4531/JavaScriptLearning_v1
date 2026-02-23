@@ -280,14 +280,53 @@
 
 /* ****************************************мутирование копий**************************************** */
 
+// const person = {
+//     name: "Test",
+//     age: 21
+// }
+// // "скопировали" объект (на самом деле записали ссылку на один и тот же объект из одной переменной в другую) (copy by reference)
+// const person2 = person
+// // "поменяли" "копию" объекта (на самом деле нет, не копию, а сам объект)
+// person2.age = 36
+// person2.isStaryi = true
+// // сам объект тоже поменялся, нихуя себе!
+// console.log(person)
+
+/* ****************************************как избежать мутаций**************************************** */
+
 const person = {
     name: "Test",
     age: 21
 }
-// "скопировали" объект (на самом деле записали ссылку на один и тот же объект из одной переменной в другую)
-const person2 = person
-// "поменяли" "копию" объекта (на самом деле нет, не копию, а сам объект)
-person2.age = 36
-person2.isStaryi = true
-// сам объект тоже поменялся, нихуя себе!
-console.log(person)
+
+// с помощью специальной функции (точнее с помощью специального метода объекта Object) можно прям создать копию объекта
+
+const person2 = Object.assign({}, person) // почитать про эту шнягу подробне
+
+person2.age = 26
+person2.name = "HUI"
+// console.log(person)
+// console.log(person2)
+
+// но при использовании метода assign ВЛОЖЕННЫЕ объекты не копируются, а мутируются, т.е. если у объекта есть вложенные объекты, то ссылки на них СОХРАНЯЮТСЯ
+
+const bimbus = {
+    test: "Test",
+    isChlen: {
+        da: false,
+        net: true
+    }
+}
+
+const bimbus2 = Object.assign({}, bimbus)
+
+bimbus.isChlen.da = true
+bimbus2.test = "Not_Test"
+bimbus2.isChlen.net = false
+
+console.log(bimbus)
+console.log(bimbus2)
+
+// и вот такой вывод получим в таком случае:
+// { test: 'Test', isChlen: { da: true, net: false } }
+// { test: 'Not_Test', isChlen: { da: true, net: false } }
