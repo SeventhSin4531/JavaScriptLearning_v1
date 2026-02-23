@@ -333,22 +333,48 @@
 
 /* ****************************************второй способ создания копий объекта**************************************** */
 
-const person = {
-    name: "Test",
-    age: 21
-}
+// const person = {
+//     name: "Test",
+//     age: 21
+// }
 
-// используем оператор разделения объекта на свойства (...)
+// // используем оператор разделения объекта на свойства (...)
 
-const person2 = {...person}
+// const person2 = {...person}
 
-person2.name = "ЗА РУССА И ВСЕОТЦА!!!"
-person2.age = 40000
+// person2.name = "ЗА РУССА И ВСЕОТЦА!!!"
+// person2.age = 40000
 
-console.log(person)
-console.log(person2)
+// console.log(person)
+// console.log(person2)
 
-// но это по сути одна хуйня, используя такой метод вложенные объекты не скопируешь
+// // но это по сути одна хуйня, используя такой метод вложенные объекты не скопируешь
+
+// const bimbus = {
+//     test: "Test",
+//     isChlen: {
+//         da: false,
+//         net: true
+//     }
+// }
+
+// const bimbus2 = {...bimbus}
+
+// bimbus.isChlen.da = true
+// bimbus2.test = "Not_Test"
+// bimbus2.isChlen.net = false
+
+// console.log(bimbus)
+// console.log(bimbus2)
+
+// // вывод такой же, как и в первом случае:
+// // { test: 'Test', isChlen: { da: true, net: false } }
+// // { test: 'Not_Test', isChlen: { da: true, net: false } }
+
+/* ****************************************третий способ создания копий объекта**************************************** */
+
+// АХАХАХАХАХАХАХ ЕБАТЬ, ЗЫРЬТЕ ЧО
+// вот у нас есть объект нахуй
 
 const bimbus = {
     test: "Test",
@@ -358,15 +384,22 @@ const bimbus = {
     }
 }
 
-const bimbus2 = {...bimbus}
+// и мы такие типо хуяк:
 
+const bimbus2 = JSON.parse(JSON.stringify(bimbus))
+
+// поняли нет?) смешно?) мы сначала его короче в строку хуйнули, потом эту строку перепиздрячили в объект, и этот объект в новую переменную записали
+
+bimbus2.test = "JOPA"
 bimbus.isChlen.da = true
-bimbus2.test = "Not_Test"
 bimbus2.isChlen.net = false
 
 console.log(bimbus)
 console.log(bimbus2)
 
-// вывод такой же, как и в первом случае:
-// { test: 'Test', isChlen: { da: true, net: false } }
-// { test: 'Not_Test', isChlen: { da: true, net: false } }
+// и вот такой по итогу у нас вывод получился:
+// { test: 'Test', isChlen: { da: true, net: true } }
+// { test: 'JOPA', isChlen: { da: false, net: false } }
+
+// так как в первых двух случаях при копировании сохранялись ссылки на вложенные объекты, isChlen был один и тот же каждый раз, а в этом, третьем случае, он тоже копируется, и копия от оригинала не зависит
+// но смешно пиздец)))
