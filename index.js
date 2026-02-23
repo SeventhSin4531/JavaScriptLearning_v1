@@ -246,3 +246,34 @@
 // let a1 = '{"userID": 1,"ID": 1,"title": "Test title","status": {"complited": false}}'
 // const b1 = JSON.parse(a1)
 // console.log(b1)
+
+/************************мутация в JS************************/
+
+const a = 10
+
+// копирование по значению (copy by value):
+
+let b = a
+
+console.log(b)
+
+b = 30
+
+console.log(b)
+console.log(a)
+
+// мутирование объекта в JS:
+
+const person = {
+    name: "Test",
+    age: 21
+}
+
+console.log(person)
+
+// тут мы поменяли свойства объекта, не меняя ссылку на объект, это и называется мутацией объекта
+
+person.age = 22
+person.isStariy = true
+
+console.log(person)
