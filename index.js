@@ -592,14 +592,15 @@
 
 /* ********************************************************************************цепочка областей видимости******************************************************************************** */
 
-const a = 5
+// const a = 5
 
-function myFn() {
-    function innerFn() {
-        console.log(a)
-    }
-    innerFn()
-}
+// function myFn() {
+//     function innerFn() {
+//         console.log(a)
+//     }
+//     innerFn()
+// }
 
-myFn()
-// innerFn() // ReferenceError: innerFn is not defined ))) (потому что в глобальной области видимости не существует innerFn)
+// myFn()
+// // innerFn() // ReferenceError: innerFn is not defined ))) (потому что в глобальной области видимости не существует innerFn)
+// // кстати результатом вызова функции myFn() будет undefined
