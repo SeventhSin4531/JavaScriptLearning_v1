@@ -859,18 +859,42 @@
 // // но в этом случае важна последовательность записи, пушо если сначала задать объекту свойство,
 // // а потом перезаписать его из другого объекта с помощью ..., то оно будет перезаписано (ни ху я себе, если перезаписывать, то будет перезаписано, никогда такого не было и вот опять)
 
-const button = {
+// const button = {
+//     width: 200,
+//     text: "Kupi",
+//     color: "green"
+// }
+
+// const redButton = {
+//     color: "red",
+//     ...button,
+// }
+
+// console.table(button)
+// console.table(redButton)
+
+// // такая вот хуйня короче, вот)
+
+// объединение объектов с помощью ...
+
+const huiSize = {   /* 1 объект */
+    razmer: "Bolshoi"
+}
+
+const huiParam = {  /* 2 объект */
+    color: "Govno",
     width: 200,
-    text: "Kupi",
-    color: "green"
+    huids: 300,
 }
 
-const redButton = {
-    color: "red",
-    ...button,
+const HUI = {       /* 3 объект */
+    ...huiSize,
+    ...huiParam
 }
 
-console.table(button)
-console.table(redButton)
+// в данном примере сначала создаётся 2 объекта
+// после этого создаётся 3-й объект, на основе первых двух
 
-// такая вот хуйня короче, вот)
+console.table(HUI)
+console.table(huiParam)
+console.table(huiSize)
