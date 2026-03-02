@@ -875,26 +875,83 @@
 
 // // такая вот хуйня короче, вот)
 
-// объединение объектов с помощью ...
+// // объединение объектов с помощью ...
 
-const huiSize = {   /* 1 объект */
-    razmer: "Bolshoi"
+// const huiSize = {   /* 1 объект */
+//     razmer: "Bolshoi"
+// }
+
+// const huiParam = {  /* 2 объект */
+//     color: "Govno",
+//     width: 200,
+//     huids: 300,
+// }
+
+// const HUI = {       /* 3 объект */
+//     ...huiSize,
+//     ...huiParam
+// }
+
+// // в данном примере сначала создаётся 2 объекта
+// // после этого создаётся 3-й объект, на основе первых двух
+
+// console.table(HUI)
+// console.table(huiParam)
+// console.table(huiSize)
+
+// естесственно в этом случае так же важен порядок, ибо если какое-то свойство есть и в 1 и во 2 объекте, то в конечный, 3 объект запишется то свойство, которое было записано последним
+
+const tankInfo = {
+    name: "T-34",
+    weight: 40,
+    color: "green",
+    calibr: 152
 }
 
-const huiParam = {  /* 2 объект */
-    color: "Govno",
-    width: 200,
-    huids: 300,
+const tankStyle = {
+    name: "Sherman",
+    ves: 22,
+    cvet: "AAAAAAA",
+    popa: "net(",
+    weight: 45,
 }
 
-const HUI = {       /* 3 объект */
-    ...huiSize,
-    ...huiParam
+const tank = {          /* здесь именно создаётся новый объект, т.е. если мы будем менять tankStyle и/или tankInfo, tank не изменится*/
+    ...tankStyle,
+    ...tankInfo
 }
 
-// в данном примере сначала создаётся 2 объекта
-// после этого создаётся 3-й объект, на основе первых двух
+console.table(tank)
+console.table(tankStyle)
+console.table(tankInfo)
 
-console.table(HUI)
-console.table(huiParam)
-console.table(huiSize)
+// вывод:
+
+// ┌─────────┬───────────┐
+// │ (index) │ Values    │
+// ├─────────┼───────────┤
+// │ name    │ 'T-34'    │
+// │ ves     │ 22        │
+// │ cvet    │ 'AAAAAAA' │
+// │ popa    │ 'net('    │
+// │ weight  │ 40        │
+// │ color   │ 'green'   │
+// │ calibr  │ 152       │
+// └─────────┴───────────┘
+// ┌─────────┬───────────┐
+// │ (index) │ Values    │
+// ├─────────┼───────────┤
+// │ name    │ 'Sherman' │
+// │ ves     │ 22        │
+// │ cvet    │ 'AAAAAAA' │
+// │ popa    │ 'net('    │
+// │ weight  │ 45        │
+// └─────────┴───────────┘
+// ┌─────────┬─────────┐
+// │ (index) │ Values  │
+// ├─────────┼─────────┤
+// │ name    │ 'T-34'  │
+// │ weight  │ 40      │
+// │ color   │ 'green' │
+// │ calibr  │ 152     │
+// └─────────┴─────────┘
