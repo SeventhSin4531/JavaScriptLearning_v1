@@ -1104,34 +1104,49 @@
 // console.log(myBook_2(10, 2))  /* 20 */
 // console.log(myBook_2(7))      /* 7 */
 
-// пример №2:
+// // пример №2:
 
-const newPost = (post, addedAt = Date()) => ({  /* круглые скобки нужны для того, чтобы неявно вернуть объект */
-    ...post,
-    addedAt
-})
+// const newPost = (post, addedAt = Date()) => ({  /* круглые скобки нужны для того, чтобы неявно вернуть объект */
+//     ...post,
+//     addedAt
+// })
 
-const firstPost = {
-    id: 1,
-    author: "Test"
+// const firstPost = {
+//     id: 1,
+//     author: "Test"
+// }
+
+// console.table(newPost(firstPost))
+// console.table(firstPost)
+
+// const newPost_2 = (post, addedAt = Date()) => { /* вариант с явным возвратом объекта */
+//     const newPost = {
+//         ...post,
+//         addedAt,
+//     }
+//     return newPost
+// }
+// const secondPost = newPost_2(firstPost)
+
+// console.table(secondPost)
+// console.table(firstPost)
+
+// secondPost.id = 2
+
+// console.table(secondPost)
+// console.table(firstPost)
+
+/* ********************************************************************************обработка ошибок******************************************************************************** */
+
+const fnWithError = () => {
+    throw new Error("Some error") /* в данном случае, здесь происходит генерация ошибки */
 }
 
-console.table(newPost(firstPost))
-console.table(firstPost)
+// при таком синтаксисе, это будет Uncaught ошибка (непойманная),
+// программа останавливается в момент вызова функции с ошибкой, и дальше никакие инструкции не выполняются
 
-const newPost_2 = (post, addedAt = Date()) => { /* вариант с явным возвратом объекта */
-    const newPost = {
-        ...post,
-        addedAt,
-    }
-    return newPost
-}
-const secondPost = newPost_2(firstPost)
+fnWithError()
 
-console.table(secondPost)
-console.table(firstPost)
+console.log("Continue")
 
-secondPost.id = 2
-
-console.table(secondPost)
-console.table(firstPost)
+// решением проблемы будет try/catch:
