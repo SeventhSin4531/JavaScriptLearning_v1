@@ -1086,20 +1086,52 @@
 
 // // так можно задать значения по умолчанию для каждого параметра функции
 
-// запись через функциональное выражение:
+// // запись через функциональное выражение:
 
-const myBook_1 = function(value, muitipl = 1) {
-    return value * muitipl
+// const myBook_1 = function(value, muitipl = 1) {
+//     return value * muitipl
+// }
+
+// console.log(myBook_1(10, 2))  /* 20 */
+// console.log(myBook_1(7))      /* 7 */
+
+// // запись через стрелочную функцию:
+
+// const myBook_2 = (value, muitipl = 1) => {
+//     return value * muitipl
+// }
+
+// console.log(myBook_2(10, 2))  /* 20 */
+// console.log(myBook_2(7))      /* 7 */
+
+// пример №2:
+
+const newPost = (post, addedAt = Date()) => ({  /* круглые скобки нужны для того, чтобы неявно вернуть объект */
+    ...post,
+    addedAt
+})
+
+const firstPost = {
+    id: 1,
+    author: "Test"
 }
 
-console.log(myBook_1(10, 2))  /* 20 */
-console.log(myBook_1(7))      /* 7 */
+console.table(newPost(firstPost))
+console.table(firstPost)
 
-// запись через стрелочную функцию:
-
-const myBook_2 = (value, muitipl = 1) => {
-    return value * muitipl
+const newPost_2 = (post, addedAt = Date()) => { /* вариант с явным возвратом объекта */
+    const newPost = {
+        ...post,
+        addedAt,
+    }
+    return newPost
 }
+const secondPost = newPost_2(firstPost)
 
-console.log(myBook_2(10, 2))  /* 20 */
-console.log(myBook_2(7))      /* 7 */
+console.table(secondPost)
+console.table(firstPost)
+
+secondPost.id = 2
+
+console.table(secondPost)
+console.table(firstPost)
