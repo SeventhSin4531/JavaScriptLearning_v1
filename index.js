@@ -1267,10 +1267,29 @@
 
 // console.log(myObj.3) /* SyntaxError */
 
-const myArray = [1, 2, 3]
-// можно изменить значение свойства length вручную:
-myArray.length = 7
-// но в таком случае в массиве будут пустые элементы, а это хуёво, нельзя так делать
-console.log(myArray)
+// const myArray = [1, 2, 3]
+// // можно изменить значение свойства length вручную:
+// myArray.length = 7
+// // но в таком случае в массиве будут пустые элементы, а это хуёво, нельзя так делать
+// console.log(myArray)
 
-myArray.length = 3
+// myArray.length = 3
+
+// ПОРЯДОК ЭЛЕМЕНТОВ В МАССИВЕ ВАЖЕН, ПОТОМУ ЧТО КАЖДЫЙ ЭЛЕМЕНТ ИМЕЕТ СВОЙ ПОРЯДКОВЫЙ НОМЕР, ИНДЕКС!************************************************************
+
+// добавление новых элементов в массив:
+
+const myArray = [1, 2, 3, 4]
+
+console.log(myArray)
+console.log(myArray.length)     /* 4 */
+
+myArray[2] = "popa"             /* изменили значение элемента с индексом 2 */
+
+console.log(myArray)
+console.log(myArray[2])
+
+myArray[4] = true               /* добавили новый элемент в массив, в конец */
+
+console.log(myArray)
+console.log(myArray.length)     /* 5, т.к. JS автаматически изменил значение свойства ленгтх */
