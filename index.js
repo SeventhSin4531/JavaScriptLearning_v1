@@ -1310,17 +1310,20 @@
 
 // // *************************************************************** ПОВТОРЕНИЕ ***************************************************************
 
-const myBimbus = {
-    size: "Big",
-    nnn: 123,
-    pupupu: undefined,
-}
+// const myBimbus = {
+//     size: "Big",
+//     nnn: 123,
+//     pupupu: undefined,
+// }
 
-console.log(myBimbus)
-// myBimbus = 5
+// // console.log(myBimbus)
+// // myBimbus = 5
 
-myBimbus.size = 13
-console.log(myBimbus)
+// myBimbus.size = 13
+// console.log(myBimbus)
 
-myBimbus.hui = "chikipiki"
-console.log(myBimbus)
+// myBimbus.hui = "chikipiki"
+// console.log(myBimbus)
+
+// delete myBimbus.pupupu
+// console.log(myBimbus)
