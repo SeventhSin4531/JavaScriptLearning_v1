@@ -1294,3 +1294,16 @@
 // console.log(myArray)
 // console.log(myArray.length)     /* 5, т.к. JS автаматически изменил значение свойства ленгтх */
 
+// // *************************************************************** ВОЗВРАЩЕНИЕ ***************************************************************
+
+// const objA = {
+//     a: 10,
+//     b: true,
+// }
+
+// console.log(objA)
+// const copyOfA = objA
+
+// console.log(copyOfA)
+// copyOfA.c = "penis"
+// console.log(objA)
