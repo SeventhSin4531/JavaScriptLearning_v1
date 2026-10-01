@@ -1307,3 +1307,20 @@
 // console.log(copyOfA)
 // copyOfA.c = "penis"
 // console.log(objA)
+
+// // *************************************************************** ПОВТОРЕНИЕ ***************************************************************
+
+const myBimbus = {
+    size: "Big",
+    nnn: 123,
+    pupupu: undefined,
+}
+
+console.log(myBimbus)
+// myBimbus = 5
+
+myBimbus.size = 13
+console.log(myBimbus)
+
+myBimbus.hui = "chikipiki"
+console.log(myBimbus)
